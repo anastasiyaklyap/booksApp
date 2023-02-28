@@ -1,4 +1,3 @@
-/*global process */
 'use strict';
 class BooksList {
   constructor() {
