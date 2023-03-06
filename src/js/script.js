@@ -11,12 +11,11 @@ class BooksList {
 
   fetch() {
     const thisBooks = this;
-    const url = '//localhost:3131/books';
+    const url = 'http://localhost:3131/books';
     const fetchData = async (url) => {
       try {
         const rawResponse = await fetch(url);
-        const parsedResponse = await rawResponse.json();
-        thisBooks.data = parsedResponse;
+        thisBooks.data = await rawResponse.json();
         thisBooks.initData();
       } catch (error) {
         console.error(error);
